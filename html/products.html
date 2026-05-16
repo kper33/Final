@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products & Services | GreenTech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="global-header">
+    <div class="logo">
+        <strong>GreenTech</strong><span>Solutions</span>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="blog.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
+        </ul>
+    </nav>
+</header>
+    <main id="main-content">
+        <h2>Our Sustainable Solutions</h2>
+        <p>We offer eco-friendly hardware tools and data tracking software designed to help businesses reduce operational waste and lower utility bills.</p>
+
+      
+        <div class="filter-controls">
+            <label for="product-filter"><strong>Filter by Category:</strong> </label>
+            <select id="product-filter">
+                <option value="all">Show All Items</option>
+                <option value="hardware">Hardware Devices</option>
+                <option value="software">Software Tools</option>
+            </select>
+        </div>
+
+  
+        <div class="products-grid" id="products-container">
+            
+           
+            <div class="product-item card" data-category="hardware">
+                <img src="images/eco-device.jpg" alt="Energy saving plug-in unit with green status light">
+                <h3>EcoPulse Smart Socket</h3>
+                <p><em>Category: Hardware Devices</em></p>
+                <p>An intelligent power strip that automatically cuts off phantom electricity loads when your office equipment is idle or shut down for the weekend.</p>
+            </div>
+
+        
+            <div class="product-item card" data-category="hardware">
+                <img src="images/smart-bin.jpg" alt="Compact indoor recycling container with built-in electronic weight display">
+                <h3>TerraBin Waste Monitor</h3>
+                <p><em>Category: Hardware Devices</em></p>
+                <p>A smart, indoor recycling bin sensor system that alerts your facilities team when collections are full, tracking total recycled weight logs dynamically.</p>
+            </div>
+
+      
+            <div class="product-item card" data-category="software">
+                <img src="images/carbon-dashboard.jpg" alt="Computer screen displaying columns of emission metrics and charts">
+                <h3>EcoTrack Cloud Dashboard</h3>
+                <p><em>Category: Software Tools</em></p>
+                <p>A simple cloud interface where you can enter utility bill numbers to see your company's monthly greenhouse gas emission metrics instantly computed.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="global-footer">
+        <p>&copy; 2026 GreenTech Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
