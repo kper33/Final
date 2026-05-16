@@ -1,272 +1,231 @@
-/* --- Global Styles & Color Scheme --- */
+/* --- Base Styles --- */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-    margin: 0;
-    padding: 0;
+    background-color: white;
+    color: black;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* --- High Contrast Option (Required for Accessibility) --- */
+/* --- High Contrast View (Accessibility) --- */
 body.high-contrast {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: black;
+    color: white;
 }
 body.high-contrast .card {
-    background-color: #000000;
-    border: 3px solid #00ff00;
-    color: #ffffff;
+    background-color: black;
+    border: 2px solid lime;
+    color: white;
 }
 body.high-contrast .global-header {
-    background-color: #000000;
-    border-bottom: 3px solid #00ff00;
+    background-color: black;
+    border-bottom: 2px solid lime;
 }
-body.high-contrast a, body.high-contrast h1, body.high-contrast h2, body.high-contrast h3 {
-    color: #00ff00;
+body.high-contrast a {
+    color: lime;
 }
 
 /* --- Accessibility Skip Link --- */
 .skip-link {
     position: absolute;
-    top: -100px;
-    left: 10px;
-    background-color: #3e2723;
+    top: -50px;
+    left: 0px;
+    background-color: brown;
     color: white;
-    padding: 10px;
-    text-decoration: none;
+    padding: 5px;
 }
 .skip-link:focus {
-    top: 10px;
+    top: 0px;
 }
 
-/* --- Header and Navigation Menu --- */
+/* --- Header & Navigation --- */
 .global-header {
-    background-color: #e8f5e9; /* Light Green */
+    background-color: #e8f5e9; /* Very light green background */
     padding: 20px;
-    border-bottom: 4px solid #2e7d32; /* Darker Green */
+    border-bottom: 3px solid green;
+    text-align: center; /* Center everything easily */
 }
 
 .logo {
     font-size: 24px;
-    float: left; /* Old school layout trick beginners often try */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .logo strong {
-    color: #2e7d32;
+    color: green;
 }
 .logo span {
-    color: #3e2723; /* Earthy brown */
+    color: brown;
 }
 
-.nav-menu {
-    float: right;
-}
 .nav-menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 .nav-menu li {
-    display: inline;
-    margin-left: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .nav-menu a {
-    color: #3e2723;
+    color: brown;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
 }
 .nav-menu a:hover, .nav-menu a.active {
-    color: #2e7d32;
+    color: green;
     text-decoration: underline;
 }
 
-/* Clearfix for the floating header elements */
-.global-header::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .menu-toggle {
-    display: none; /* Hidden on desktop */
-    font-size: 24px;
-    background: none;
-    border: 1px solid #2e7d32;
-    padding: 5px 10px;
+    display: none; /* Hide the mobile button on desktop computer screens */
+    font-size: 20px;
     cursor: pointer;
 }
 
-/* --- Main Content Layout --- */
+/* --- Main Layout Space --- */
 main {
-    padding: 30px;
-    max-width: 1000px;
-    margin: 0 auto; /* Centers the website content */
+    padding: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Single Page Application Views */
+/* Single Page App Toggle Logic */
 .page-view {
-    display: none; /* Hidden by default, controlled by JS */
+    display: none;
 }
 .page-view.active-view {
-    display: block; /* Shows active page */
+    display: block;
 }
 
-/* --- Homepage / Hero Section --- */
+/* --- Home Section Hero Banner --- */
 .hero-section {
-    background-color: #f5f5f5;
-    padding: 40px;
+    background-color: #f5f5f5; /* Light grey */
+    padding: 30px;
     text-align: center;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 30px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
 }
 .hero-section h1 {
-    color: #2e7d32;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-.hero-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    color: green;
 }
 
 /* --- Buttons --- */
 .btn-primary {
-    background-color: #2e7d32;
+    background-color: green;
     color: white;
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     display: inline-block;
     border: none;
-    font-weight: bold;
     cursor: pointer;
 }
 .btn-primary:hover {
-    background-color: #1b5e20;
+    background-color: darkgreen;
 }
 .btn-accessibility {
-    background-color: #ffffff;
-    border: 2px solid #3e2723;
-    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
     cursor: pointer;
 }
 
-/* --- Grid Layouts (Using basic Flexbox instead of advanced Grid) --- */
+/* --- Cards Grid Layout --- */
 .features-grid, .products-grid, .blog-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
 }
 
 .card {
     background-color: #f5f5f5;
-    border: 2px solid #2e7d32;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 30%; /* Standard beginner way to make 3 columns */
-    box-sizing: border-box;
+    border: 1px solid green;
+    padding: 15px;
+    width: 30%; /* Divides row into 3 columns */
+    box-sizing: border-box; /* Ensures padding doesn't break the width calculation */
 }
 
 .product-item img {
-    width: 100%; /* Makes image fit the card width */
+    width: 100%;
     height: 150px;
-    object-fit: cover;
 }
 
-/* --- Filter Dropdown Menu --- */
+/* --- Filter Controls Dropdown --- */
 .filter-controls {
     margin-bottom: 20px;
-    background-color: #e8f5e9;
     padding: 10px;
-    border-radius: 4px;
-}
-.filter-controls select {
-    padding: 5px;
-    font-size: 16px;
+    background-color: #e8f5e9;
 }
 
-/* --- About Timeline --- */
+/* --- About Us Timeline --- */
 .timeline {
-    margin-top: 20px;
-    padding-left: 20px;
-    border-left: 4px solid #2e7d32;
+    border-left: 3px solid green;
+    padding-left: 15px;
 }
 .timeline-item {
-    margin-bottom: 20px;
-}
-.timeline-item h4 {
-    color: #2e7d32;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* --- Contact Form Wrapper --- */
+/* --- Contact Form Layout --- */
 .contact-wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 #contact-form {
-    width: 55%;
+    width: 50%;
 }
 .contact-info {
-    width: 35%;
+    width: 40%;
     background-color: #f5f5f5;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid grey;
 }
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .form-group label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
 }
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #2e7d32;
+    padding: 5px;
 }
 
-/* --- Footer --- */
+/* --- Footer Area --- */
 .global-footer {
-    background-color: #3e2723;
+    background-color: brown;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-/* --- Mobile Responsiveness (Simple Media Query) --- */
+/* --- Mobile Responsiveness (Simple Mobile Layout Override) --- */
 @media (max-width: 768px) {
-    .logo {
-        float: none;
-        text-align: center;
-    }
     .menu-toggle {
-        display: block; /* Shows hamburger menu button */
-        margin: 10px auto;
+        display: block; /* Show hamburger button on smaller screen widths */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
     }
     .nav-menu {
-        float: none;
-        display: none; /* Hide nav links by default on mobile */
-        text-align: center;
+        display: none; /* Hide menu listings on mobile by default */
     }
     .nav-menu.mobile-open {
-        display: block; /* Toggled by JavaScript */
+        display: block; /* Block layout toggle for active navigation links */
     }
     .nav-menu li {
-        display: block; /* Stacks links vertically */
-        margin: 10px 0;
+        display: block; /* Change menu alignment from row items to vertically stacked elements */
+        margin-bottom: 10px;
     }
-    .card {
-        width: 100%; /* Stacks all cards on top of each other on small screens */
+    .features-grid, .products-grid, .blog-grid, .contact-wrapper {
+        flex-direction: column; /* Force box items to stack on small screens */
     }
-    .contact-wrapper {
-        flex-direction: column; /* Stacks form and contact info info */
-    }
-    #contact-form, .contact-info {
-        width: 100%;
-        margin-bottom: 20px;
+    .card, #contact-form, .contact-info {
+        width: 100%; /* Make items stretch all the way across the narrow screen block */
+        margin-bottom: 15px;
     }
 }
