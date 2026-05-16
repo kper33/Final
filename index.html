@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTech Solutions | Eco-Friendly Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Header & Navigation -->
+    <header class="global-header">
+        <div class="logo">
+            <strong>GreenTech</strong><span>Solutions</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            &#9776;
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="about">About Us</a></li>
+                <li><a href="#" class="nav-link" data-target="products">Products</a></li>
+                <li><a href="#" class="nav-link" data-target="blog">Resources</a></li>
+                <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+                <li><button id="contrast-toggle" class="btn-accessibility" aria-label="Toggle High Contrast Mode">Contrast Tool</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+
+        <!-- HOMEPAGE SECTION -->
+        <section id="home" class="page-view active-view">
+            <div class="hero-section">
+                <h1>Innovating for a Greener Tomorrow</h1>
+                <p>Emporing SMBs with cutting-edge, sustainable technology to reduce carbon footprints efficiently.</p>
+                <a href="#" class="btn-primary cta-link" data-target="products">Explore Products</a>
+            </div>
+            <div class="features-grid">
+                <div class="card">
+                    <h3>Eco-Devices</h3>
+                    <p>Energy-efficient hardware solutions tailored to scale business operations sustainably.</p>
+                </div>
+                <div class="card">
+                    <h3>Smart Recycling</h3>
+                    <p>Automated, intelligent waste management systems built for modern commercial spaces.</p>
+                </div>
+                <div class="card">
+                    <h3>Carbon Tracking</h3>
+                    <p>Actionable data analytics software to map, measure, and mitigate your business emissions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="page-view">
+            <h2>Our Story & Mission</h2>
+            <p class="section-lead">Founded on the principle that technological advancement shouldn't come at the cost of our planet.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2023 - Foundations</h4>
+                    <p>GreenTech Solutions launched with a core team of three environmental engineers.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2024 - Smart Systems Launch</h4>
+                    <p>Introduced our proprietary Smart Recycling hardware to local businesses.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2026 - Going Global</h4>
+                    <p>Expanded our carbon tracking cloud infrastructure to support over 500 SMBs internationally.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS / SERVICES SECTION -->
+        <section id="products" class="page-view">
+            <h2>Our Sustainable Solutions</h2>
+            
+            <!-- Dynamic Interaction Controls -->
+            <div class="filter-controls">
+                <label for="product-filter">Filter Offerings:</label>
+                <select id="product-filter">
+                    <option value="all">Show All Products</option>
+                    <option value="hardware">Hardware & Devices</option>
+                    <option value="software">Software Platforms</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="products-container">
+                <div class="product-item card" data-category="hardware">
+                    <img src="images/eco-device.jpg" alt="Sleek silver energy-efficient desktop device hardware unit">
+                    <h3>Eco-Pulse Device v2</h3>
+                    <p>Category: Hardware</p>
+                    <p>Optimizes office power configurations, slashing utility emissions by up to 35%.</p>
+                </div>
+                <div class="product-item card" data-category="hardware">
+                    <img src="images/smart-bin.jpg" alt="Modern green smart recycling bin with digital interface panel">
+                    <h3>TerraBin Smart System</h3>
+                    <p>Category: Hardware</p>
+                    <p>AI-driven waste sorting that eliminates corporate recycling contamination risks.</p>
+                </div>
+                <div class="product-item card" data-category="software">
+                    <img src="images/carbon-dashboard.jpg" alt="Dashboard interface showing charts of carbon tracking data analytics">
+                    <h3>EcoTrack Cloud Suite</h3>
+                    <p>Category: Software</p>
+                    <p>Real-time data visualization maps your operational carbon footprint across operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG / RESOURCES SECTION -->
+        <section id="blog" class="page-view">
+            <h2>Sustainability Resources</h2>
+            <div class="blog-grid">
+                <article class="card">
+                    <h3>5 Ways SMBs Can Cut Energy Costs Today</h3>
+                    <p><small>Published: May 2026</small></p>
+                    <p>Quick operational shifts that lower overhead and minimize environmental impacts immediately.</p>
+                </article>
+                <article class="card">
+                    <h3>Understanding Scope 1, 2, and 3 Emissions</h3>
+                    <p><small>Published: April 2026</small></p>
+                    <p>A simple breakdown of regulatory environmental frameworks for scaling commercial enterprises.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="page-view">
+            <h2>Partner with GreenTech</h2>
+            <div class="contact-wrapper">
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="user-name">Full Name *</label>
+                        <input type="text" id="user-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Business Email *</label>
+                        <input type="email" id="user-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-message">Message *</label>
+                        <textarea id="user-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                    <div id="form-feedback" aria-live="polite"></div>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Corporate Office</h3>
+                    <p><strong>Address:</strong> 100 Eco-Innovation Way, Suite 400</p>
+                    <p><strong>Email:</strong> partner@greentechsolutions.local</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <p>&copy; 2026 GreenTech Solutions. All rights reserved. Designed for digital accessibility.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

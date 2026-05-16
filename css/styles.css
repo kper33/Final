@@ -1,0 +1,166 @@
+/* --- Core Properties & Themes --- */
+:root {
+    --primary-green: #2e7d32;
+    --light-green: #e8f5e9;
+    --dark-earth: #3e2723;
+    --pure-white: #ffffff;
+    --soft-gray: #f5f5f5;
+    --text-color: #212121;
+    --transition-speed: 0.3s;
+}
+
+/* --- High Contrast Accessibility Layer --- */
+body.high-contrast {
+    --primary-green: #00ff00;
+    --light-green: #000000;
+    --dark-earth: #ffffff;
+    --pure-white: #000000;
+    --soft-gray: #121212;
+    --text-color: #ffffff;
+}
+
+/* --- Document Settings & Layout Fundamentals --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--pure-white);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* --- Focus & Skip-Link Accessibility Layouts --- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--dark-earth);
+    color: var(--pure-white);
+    padding: 8px;
+    z-index: 100;
+    transition: top var(--transition-speed);
+}
+.skip-link:focus { top: 0; }
+*:focus-visible { outline: 3px solid var(--primary-green); }
+
+/* --- Global Components Layout --- */
+.global-header {
+    background-color: var(--light-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.logo strong { color: var(--primary-green); font-size: 1.5rem; }
+.logo span { color: var(--dark-earth); font-size: 1.5rem; }
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--dark-earth);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-menu a.active, .nav-menu a:hover {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+/* --- Modular Component Layouts (SPA Panels) --- */
+.page-view { display: none; animation: fadeIn var(--transition-speed) ease-in; }
+.page-view.active-view { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Flexbox & Grid Systems --- */
+.features-grid, .products-grid, .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--soft-gray);
+    border: 1px solid var(--primary-green);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* --- Forms & UI Interactive Layouts --- */
+.filter-controls { margin-bottom: 1.5rem; }
+.filter-controls select { padding: 0.5rem; font-size: 1rem; border-radius: 4px; }
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; margin-bottom: 0.3rem; font-weight: bold; }
+.form-group input, .form-group textarea {
+    width: 100%; padding: 0.8rem; border: 1px solid var(--primary-green); border-radius: 4px; background: var(--pure-white); color: var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-green); color: var(--pure-white); padding: 0.8rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: bold;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-accessibility { padding: 0.4rem 0.8rem; border: 1px solid var(--dark-earth); background: transparent; cursor: pointer; font-weight: bold; }
+
+/* --- Simple Timeline Configuration --- */
+.timeline { border-left: 3px solid var(--primary-green); padding-left: 1.5rem; margin-top: 2rem; }
+.timeline-item { margin-bottom: 1.5rem; position: relative; }
+
+/* --- Responsive Layout Configurations (Mobile First) --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; color: var(--text-color); }
+    .nav-menu {
+        display: none; width: 100%; position: absolute; top: 70px; left: 0; background: var(--light-green); padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 10;
+    }
+    .nav-menu.mobile-open { display: block; }
+    .nav-menu ul { flex-direction: column; align-items: flex-start; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .global-header { position: relative; }
+}
+
+.global-footer { background: var(--dark-earth); color: var(--pure-white); text-align: center; padding: 1rem; font-size: 0.9rem; margin-top: auto;}
