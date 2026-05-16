@@ -10,29 +10,31 @@
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="global-header">
-    <div class="logo">
-        <strong>GreenTech</strong><span>Solutions</span>
-    </div>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="blog.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
-        </ul>
-    </nav>
-</header>
+    <header class="global-header">
+        <div class="logo">
+            <strong>GreenTech</strong><span>Solutions</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="blog.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
+            </ul>
+        </nav>
+    </header>
+
     <main id="main-content">
-        <h2>Our Sustainable Solutions</h2>
+        <!-- Fixed: Changed from h2 to h1 for proper document heading hierarchy -->
+        <h1>Our Sustainable Solutions</h1>
         <p>We offer eco-friendly hardware tools and data tracking software designed to help businesses reduce operational waste and lower utility bills.</p>
 
-      
         <div class="filter-controls">
-            <label for="product-filter"><strong>Filter by Category:</strong> </label>
+            <!-- Fixed: Removed the <strong> tag to keep structural HTML separate from CSS styling -->
+            <label for="product-filter">Filter by Category:</label> 
             <select id="product-filter">
                 <option value="all">Show All Items</option>
                 <option value="hardware">Hardware Devices</option>
@@ -40,10 +42,8 @@
             </select>
         </div>
 
-  
         <div class="products-grid" id="products-container">
             
-           
             <div class="product-item card" data-category="hardware">
                 <img src="images/eco-device.jpg" alt="Energy saving plug-in unit with green status light">
                 <h3>EcoPulse Smart Socket</h3>
@@ -51,7 +51,6 @@
                 <p>An intelligent power strip that automatically cuts off phantom electricity loads when your office equipment is idle or shut down for the weekend.</p>
             </div>
 
-        
             <div class="product-item card" data-category="hardware">
                 <img src="images/smart-bin.jpg" alt="Compact indoor recycling container with built-in electronic weight display">
                 <h3>TerraBin Waste Monitor</h3>
@@ -59,7 +58,6 @@
                 <p>A smart, indoor recycling bin sensor system that alerts your facilities team when collections are full, tracking total recycled weight logs dynamically.</p>
             </div>
 
-      
             <div class="product-item card" data-category="software">
                 <img src="images/carbon-dashboard.jpg" alt="Computer screen displaying columns of emission metrics and charts">
                 <h3>EcoTrack Cloud Dashboard</h3>

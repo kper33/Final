@@ -228,4 +228,21 @@ main {
         width: 100%; /* Make items stretch all the way across the narrow screen block */
         margin-bottom: 15px;
     }
+    
+}
+
+/* Style for your form feedback container */
+#form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Style for spacing out the corporate contact information block */
+.info-block {
+    margin-bottom: 20px;
+}
+.info-block p, 
+.info-block address {
+    margin: 0;
+    font-style: normal; /* Keeps the <address> element from automatically turning italic */
 }

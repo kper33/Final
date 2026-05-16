@@ -10,75 +10,81 @@
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="global-header">
-    <div class="logo">
-        <strong>GreenTech</strong><span>Solutions</span>
+    <!-- Moved accessibility utility out of structural navigation -->
+    <div class="accessibility-toolbar">
+        <button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button>
     </div>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="blog.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
-        </ul>
-    </nav>
-</header>
+
+    <header class="global-header">
+        <div class="logo">
+            <strong>GreenTech</strong><span>Solutions</span>
+        </div>
+        <!-- Grouped toggle button inside nav and added landmark context -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- Replaced active class with aria-current for screen readers -->
+                <li><a href="about.html" aria-current="page" class="active">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main-content">
-      
-        <div class="about-hero">
-            <h2>About GreenTech Solutions</h2>
+        <!-- Changed to h1 to establish the proper page root hierarchy -->
+        <section class="about-hero">
+            <h1>About GreenTech Solutions</h1>
             <p><strong>Our Story:</strong> GreenTech Solutions started in 2023 when a small group of tech enthusiasts and environmental advocates noticed that small businesses wanted to go green but didn't know where to start. We decided to build simple, practical technology tools to bridge that gap.</p>
             <p><strong>Our Mission:</strong> To provide accessible, eco-friendly hardware and software solutions that help small and medium-sized businesses easily track, manage, and reduce their daily carbon emissions.</p>
-        </div>
+        </section>
 
-    
-        <div class="timeline-container">
-            <h3>Our Milestones</h3>
+        <!-- Promoted timelines and teams to h2 since the main title is now h1 -->
+        <section class="timeline-container">
+            <h2>Our Milestones</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h4>2023 — The Idea</h4>
+                    <h3>2023 — The Idea</h3>
                     <p>GreenTech Solutions was officially founded in a small home office. We launched our first basic prototype for a smart recycling bin monitor.</p>
                 </div>
                 <div class="timeline-item">
-                    <h4>2024 — Going Commercial</h4>
+                    <h3>2024 — Going Commercial</h3>
                     <p>We partnered with 50 local small businesses to test our energy-efficient workplace devices, helping them cut electricity waste by 20%.</p>
                 </div>
                 <div class="timeline-item">
-                    <h4>2025 — Software Launch</h4>
+                    <h3>2025 — Software Launch</h3>
                     <p>We rolled out our EcoTrack Cloud software dashboard, making it simple for non-technical managers to view their business utility impacts.</p>
                 </div>
                 <div class="timeline-item">
-                    <h4>2026 — Looking Ahead</h4>
+                    <h3>2026 — Looking Ahead</h3>
                     <p>Today, over 500 companies use our tools. We are actively developing new upgrades to keep making sustainable practices normal and affordable for everyone.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-     
-        <div class="team-container">
-            <h3>Meet Our Team</h3>
-            <div class="features-grid">
-                <div class="card">
-                    <h4>Jane Doe</h4>
+        <section class="team-container">
+            <h2>Meet Our Team</h2>
+            <!-- Changed features-grid to team-grid to fix semantics -->
+            <div class="team-grid">
+                <article class="card">
+                    <h3>Jane Doe</h3>
                     <p><strong>Co-Founder & CEO</strong></p>
                     <p>Jane spent 8 years working in clean technology systems and wanted to make green tracking tech affordable for everyday business owners.</p>
-                </div>
-                <div class="card">
-                    <h4>John Smith</h4>
+                </article>
+                <article class="card">
+                    <h3>John Smith</h3>
                     <p><strong>Head of Hardware Design</strong></p>
                     <p>John manages our physical eco-devices and ensures all our internal components are sourced from safely recycled electronics.</p>
-                </div>
-                <div class="card">
-                    <h4>Alice Green</h4>
+                </article>
+                <article class="card">
+                    <h3>Alice Green</h3>
                     <p><strong>Lead Software Developer</strong></p>
                     <p>Alice built our easy-to-read carbon tracking software to make sure anyone can interpret data charts without needing a science degree.</p>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="global-footer">

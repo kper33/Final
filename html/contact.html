@@ -10,29 +10,29 @@
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="global-header">
-    <div class="logo">
-        <strong>GreenTech</strong><span>Solutions</span>
-    </div>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="blog.html">Resources</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
-        </ul>
-    </nav>
-</header>
+    <header class="global-header">
+        <div class="logo">
+            <strong>GreenTech</strong><span>Solutions</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button id="contrast-toggle" class="btn-accessibility">Contrast Tool</button></li>
+            </ul>
+        </nav>
+    </header>
 
     <main id="main-content">
-        <h2>Partner with GreenTech Solutions</h2>
+        <!-- Fixed: Changed from h2 to h1 for proper document heading hierarchy -->
+        <h1>Partner with GreenTech Solutions</h1>
         <p>Have questions about scaling our items or software tools for your workspace layout? Drop our team a note below.</p>
 
         <div class="contact-wrapper">
-            
 
             <form id="contact-form" novalidate>
                 <div class="form-group">
@@ -49,22 +49,31 @@
                 </div>
                 <button type="submit" class="btn-primary">Send Message</button>
                 
-               
-                <div id="form-feedback" aria-live="polite" style="margin-top: 15px; font-weight: bold;"></div>
+                <!-- Fixed: Removed inline styles. Add spacing and bold font to #form-feedback in your CSS -->
+                <div id="form-feedback" aria-live="polite"></div>
             </form>
 
-         
             <div class="contact-info">
                 <h3>Our Office Details</h3>
-                <p><strong>Physical Address:</strong><br>
-                100 Eco-Innovation Way, Suite 400<br>
-                Portland, OR 97201</p>
-                <br>
-                <p><strong>Corporate Email:</strong><br>
-                partner@greentechsolutions.local</p>
-                <br>
-                <p><strong>Phone Number:</strong><br>
-                (555) 123-4567</p>
+                
+                <!-- Fixed: Grouped contact pieces structurally, removing erratic <br> tags -->
+                <div class="info-block">
+                    <p><strong>Physical Address:</strong></p>
+                    <address>
+                        100 Eco-Innovation Way, Suite 400<br>
+                        Portland, OR 97201
+                    </address>
+                </div>
+                
+                <div class="info-block">
+                    <p><strong>Corporate Email:</strong></p>
+                    <p>partner@greentechsolutions.local</p>
+                </div>
+                
+                <div class="info-block">
+                    <p><strong>Phone Number:</strong></p>
+                    <p>(555) 123-4567</p>
+                </div>
             </div>
 
         </div>
